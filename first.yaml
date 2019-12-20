@@ -1,4 +1,4 @@
-- name: remove the Apache package
+- name: remove the vim package
   yum:
     name: vim
     state: absent
