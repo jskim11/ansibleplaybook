@@ -1,5 +1,11 @@
 ---
-- name: install system updates for centos systems
-  yum: name=* state=latest update_cache=yes
-  when: ansible_distribution == "CentOS"
+
+- hosts: all
+  gather_facts: true
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - debug:
+        msg: "I am connecting to {{ ansible_nodename }} which is running {{ ansible_distribution }} {{ ansible_distribution_version }}"
  
