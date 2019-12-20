@@ -1,0 +1,8 @@
+---
+- name: Add a user
+  hosts: all
+  tasks:
+    - name: Add User
+      win_feature:
+        name: Web-Server
+        state: present
