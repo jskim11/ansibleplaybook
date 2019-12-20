@@ -1,4 +1,12 @@
-- name: remove the vim package
-  yum:
-    name: vim
-    state: absent
+---
+
+- hosts: all
+  gather_facts: true
+  become: yes
+  become_method: sudo
+  
+  
+  tasks:
+    - yum:
+        name: vim
+        state: "absent"
