@@ -8,5 +8,5 @@
   
   tasks:
     - yum:
-        name: vim
-        state: "absent"
+        name: nmap
+        state: "present"
