@@ -1,0 +1,8 @@
+- name: Install a list of packages
+  yum:
+    name:
+      - epel-release 
+      - ansible
+      - python-pip
+      - bind-utils
+    state: present
