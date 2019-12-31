@@ -1,12 +1,4 @@
----
-
-- hosts: all
-  gather_facts: true
-  become: yes
-  become_method: sudo
-  
-  
-  tasks:
-    - yum:
-        name: nmap
-        state: "present"
+- name: install the 'Development tools' package group
+  yum:
+    name: "@Development tools"
+    state: present
