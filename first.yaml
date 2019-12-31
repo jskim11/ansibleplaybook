@@ -1,4 +1,8 @@
-- name: install the 'Development tools' package group
+- name: Install a list of packages
   yum:
-    name: "@Development tools"
+    name:
+      - epel-release 
+      - ansible
+      - python-pip
+      - bind-utils
     state: present
