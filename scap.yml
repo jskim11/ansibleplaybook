@@ -22,6 +22,7 @@
         --report /tmp/oscap-report.html
         --fetch-remote-resources
         /usr/share/xml/scap/ssg/content/{{ oscap_policy }}.xml
+
     always:
     - name: download report
       fetch:
