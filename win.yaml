@@ -1,8 +1,6 @@
----
-- name: Add a user
+- name: Hello World Sample
   hosts: all
   tasks:
-    - name: Add User
-      win_feature:
-        name: Web-Server
-        state: present
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
